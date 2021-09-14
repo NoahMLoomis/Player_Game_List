@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noah Loomis's Players</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link type="text/css" href="./styles/style.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <header>
+        <h1>Players</h1>
+        <button type="button" class="btn btn-success" id="addPlayer">+</button>
+        <h4>Filter:</h4>
+        <div id="filter">
+            <label for="none">none</label>
+           <input class="typeGames" type="radio" id="none" name="games" value="none" checked>
+        </div>
+    </header>
+   <div id="errorDump" class="errorMsg"></div>
+    <div hidden id="formDiv">
+        <form id="inputForm">
+            <div class="form-group">
+                <h3>Add Player: </h3>
+                <!-- <label for="fName">First Name:</label> -->
+                <input id="fName" type="text" class="form-control-sm" placeholder="First Name"/><br/>
+                <p class="errorMsg" id="fNameErr"></p>
+                
+                <!-- <label for="lName">Last Name:</label> -->
+                <input id="lName" type="text" class="form-control-sm" placeholder="Last Name"/><br/>
+                <p class="errorMsg" id="lNameErr"></p>
+
+                <!-- <label for="lName">Last Name:</label> -->
+                <input id="username" type="text" class="form-control-sm" placeholder="Username"/><br/>
+                <p class="errorMsg" id="usernameErr"></p>
+
+                <!-- <label for="email">Email:</label> -->
+                <input id="email" type="text" class="form-control-sm" placeholder="Email"/><br/>
+                <p class="errorMsg" id="emailErr"></p>
+
+                <!-- <label for="winsForm">Wins:</label> -->
+                <input id="winsForm" type="text" class="form-control-sm" maxlength="3" size="6" placeholder="Wins"/><br/>
+                <p></p>
+
+                <!-- <label for="lossesForm">Losses:</label> -->
+                <input id="lossesForm" type="text" class="form-control-sm" maxlength="3" size="6" placeholder="Losses"/><br/>
+                <p class="errorMsg" id="winsLossesFormErr"></p>
+
+                <label for="enrolled">Enrolled:</label><br>
+                <input id="enrolled" type="text" class="form-control-sm"/><br/>
+                <p class="errorMsg" id="enrolledErr"></p>
+                
+                <h3>Games Played</h3>
+
+                <div id="playedGames">
+
+                </div>
+                <p class="errorMsg" id="gamesPlayedErr"></p>
+
+                <button type="button" class="btn btn-success" id="generatePlayer">Generate player</button>
+
+            </div>
+            
+        </form>
+    </div>
+
+ 
+    
+    <div id="mainDiv">
+ 
+    </div>
+  
+    <div id="rankingDiv">
+        <h3>Ranking</h3>
+        <table id="leaderboard">
+            
+        </table>
+    </div>
+
+    <footer>
+        <br><br>
+    </footer>
+
+    <script src="../files/games.json"></script>
+    <script src="../files/players.json"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
